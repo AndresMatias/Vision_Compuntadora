@@ -3,8 +3,7 @@ def adivinar(intentos): #Funcion adivinar
 	intentos_max=3
 	if intentos<=intentos_max:
 		nro1=int(input('Ingrese un numero entero para adivinar: '))
-		#nro2=random.randint(0, 100); #Numero a adivinar
-		nro2=3
+		nro2=random.randint(0, 100); #Numero a adivinar
 		print(str(nro1))
 		if nro1==nro2 :
 			print("Adivinaste en el intento "+str(intentos))
