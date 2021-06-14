@@ -10,7 +10,8 @@ def draw(event,x,y,flags,param):
 	elif event==cv2.EVENT_LBUTTONUP: #Suelto Boton
 		fx,fy=x,y
 		cv2.rectangle(img,(ix,iy),(fx,fy),(0,255,0),2)
-		print("ix:{0},iy:{1},fx:{2},fy:{3}".format(ix,iy,fx,fy))  	
+		print("ix:{0},iy:{1},fx:{2},fy:{3}".format(ix,iy,fx,fy))
+		#Correcion de coordenadas para manejar bien las posciones de la submatriz  	
 		if (ix < fx) and (iy < fy) :	 	
 			 subimg=img[iy:fy,ix:fx] #Fallo en la seleccion de la matriz
 			 guardar=not guardar
@@ -24,7 +25,9 @@ def draw(event,x,y,flags,param):
 			subimg=img[fy:iy,fx:ix]
 			guardar=not guardar
 		if (ix == fx) and (iy == fy) :
-			print("No hay imagen que guardar")	 	 
+			print("No hay imagen que guardar")	
+
+print("Nota: El rectangulo aparece una vez que se arrastro y solto el clic del mouse")	 
 img=cv2.imread('hojas.jpg',1)
 cv2.namedWindow('imagen')
 cv2.setMouseCallback('imagen',draw)

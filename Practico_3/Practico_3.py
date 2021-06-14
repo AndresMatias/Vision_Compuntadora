@@ -1,7 +1,7 @@
 import cv2
 
-#cap=cv2.VideoCapture("test.mp4")
-cap=cv2.VideoCapture(0) 
+cap=cv2.VideoCapture("test.mp4")
+#cap=cv2.VideoCapture(0) 
 (major_ver, minor_ver, subminor_ver) = (cv2.__version__).split('.') #Determino Version de OpenCV
 #--------Determino fps y tamaño del video----------
 if int(major_ver) < 3 :
@@ -20,7 +20,7 @@ while(cap.isOpened()):
     if ret is True:
         out.write(frame)
         cv2.imshow('frame',frame)
-        if cv2.waitKey(1) & 0xFF==ord('q'):
+        if cv2.waitKey(int(fps)) & 0xFF==ord('q'):
             break
         else:
             n=1
