@@ -1,5 +1,5 @@
 # Vision_Compuntadora
-Git para la materia electica de vision por computadora
+Git para la materia electiva de vision por computadora
 
 Singls Andres Matias Legajo:67166
 
