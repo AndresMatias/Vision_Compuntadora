@@ -1,4 +1,4 @@
-# Vision_Compuntadora
+# Vision Compuntadora
 Git para la materia electiva de vision por computadora
 
 ## Sobre Singls Andres:
